@@ -1,11 +1,18 @@
 package com.example.veterinaria.model;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import java.util.HashSet;
 import java.util.Set;
 import java.util.UUID;
 
 @Entity
+@Getter
+@Setter
+@NoArgsConstructor
 @Table(name = "pets")
 public class Pet {
 
@@ -32,61 +39,6 @@ public class Pet {
 
     @OneToMany(mappedBy = "pet", cascade = CascadeType.ALL)
     private Set<AppointmentDetails> appointmentDetails = new HashSet<>();
-
-    public UUID getUuid() {
-        return uuid;
-    }
-
-    public void setUuid(UUID uuid) {
-        this.uuid = uuid;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public String getBreed() {
-        return breed;
-    }
-
-    public void setBreed(String breed) {
-        this.breed = breed;
-    }
-
-    public String getGender() {
-        return gender;
-    }
-
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
-    public Owners getOwner() {
-        return owner;
-    }
-
-    public void setOwner(Owners owner) {
-        this.owner = owner;
-    }
-
-    public Set<AppointmentDetails> getAppointmentDetails() {
-        return appointmentDetails;
-    }
-
-    public void setAppointmentDetails(Set<AppointmentDetails> appointmentDetails) {
-        this.appointmentDetails = appointmentDetails;
-    }
 }
+
 
