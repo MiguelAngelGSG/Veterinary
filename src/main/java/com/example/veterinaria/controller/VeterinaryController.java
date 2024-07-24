@@ -23,4 +23,9 @@ public class VeterinaryController {
         return veterinaryService.getAllInfo();
     }
 
+    @DeleteMapping(path = "/pets/{id}")
+    public String deletePets(@PathVariable("id") Long id) {
+		return veterinaryService.deletePets(id);
+    }
+
 }
