@@ -1,4 +1,4 @@
-package com.example.veterinaria.model;
+package com.example.veterinary.model;
 
 
 import jakarta.persistence.*;

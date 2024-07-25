@@ -1,4 +1,4 @@
-package com.example.veterinaria;
+package com.example.veterinary;
 
 public class ControllerTest {
 }

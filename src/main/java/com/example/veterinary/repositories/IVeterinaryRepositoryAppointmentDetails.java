@@ -1,6 +1,6 @@
-package com.example.veterinaria.repositories;
+package com.example.veterinary.repositories;
 
-import com.example.veterinaria.model.AppointmentDetails;
+import com.example.veterinary.model.AppointmentDetails;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.UUID;
