@@ -21,10 +21,6 @@ public class AppointmentDetails {
     @Column(name = "appointment_id")
     private UUID uuid;
 
-    @ManyToOne
-    @JoinColumn(name = "pet_id", nullable = true)
-    private Pet pet;
-
     @Column(name = "date_time")
     private String dateTime;
 
@@ -40,4 +36,7 @@ public class AppointmentDetails {
     @Column(name = "status")
     private String status;
 
+    @OneToOne
+    @JoinColumn(name = "pet_id", nullable = false)
+    private Pet pet;
 }

@@ -1,9 +1,9 @@
 package com.example.veterinaria.controller;
 
+import com.example.veterinaria.service.VeterinaryServicePet;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.example.veterinaria.model.Pet;
-import com.example.veterinaria.service.VeterinaryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
@@ -13,15 +13,16 @@ import java.util.ArrayList;
 @RequestMapping("/")
 @CrossOrigin(origins = "*")
 
+public class VeterinaryControllerPet {
 
-public class VeterinaryController {
+    @Autowired
+    VeterinaryServicePet veterinaryServicePet;
 
-    @Autowired VeterinaryService veterinaryService;
-
-    @GetMapping(path = "/pets")
-    public ArrayList<Pet> getAll() {
-        return veterinaryService.getAllInfo();
+    @PostMapping(path = "/pets")
+    public Pet createPet(@RequestBody Pet newPet) {
+        return veterinaryServicePet.createPet(newPet);
     }
+<<<<<<< HEAD:src/main/java/com/example/veterinaria/controller/VeterinaryController.java
 
     @DeleteMapping(path = "/pets/{id}")
     public String deletePets(@PathVariable("id") Long id) {
@@ -29,3 +30,6 @@ public class VeterinaryController {
     }
 
 }
+=======
+}
+>>>>>>> origin/dev:src/main/java/com/example/veterinaria/controller/VeterinaryControllerPet.java
