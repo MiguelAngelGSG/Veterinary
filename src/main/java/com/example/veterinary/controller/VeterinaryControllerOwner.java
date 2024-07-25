@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/")
 @CrossOrigin(origins = "*")
 
-public class VeterinaryControllerOwners {
+public class VeterinaryControllerOwner {
 
     @Autowired
     VeterinaryServiceOwner veterinaryServiceOwner;

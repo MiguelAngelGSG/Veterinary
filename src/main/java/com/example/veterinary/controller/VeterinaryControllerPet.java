@@ -16,7 +16,7 @@ public class VeterinaryControllerPet {
     @Autowired
     VeterinaryServicePet veterinaryServicePet;
 
-    @PostMapping(path = "/pets")
+    @PostMapping(path = "/pet")
     public Pet createPet(@RequestBody Pet newPet) {
         return veterinaryServicePet.createPet(newPet);
     }
