@@ -1,7 +1,7 @@
-package com.example.veterinaria.service;
+package com.example.veterinary.service;
 
-import com.example.veterinaria.model.Owner;
-import com.example.veterinaria.repositories.IVeterinaryRepositoryOwner;
+import com.example.veterinary.model.Owner;
+import com.example.veterinary.repositories.IVeterinaryRepositoryOwner;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

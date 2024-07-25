@@ -1,7 +1,7 @@
-package com.example.veterinaria.service;
+package com.example.veterinary.service;
 
-import com.example.veterinaria.model.Pet;
-import com.example.veterinaria.repositories.IVeterinaryRepositoryPet;
+import com.example.veterinary.model.Pet;
+import com.example.veterinary.repositories.IVeterinaryRepositoryPet;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
