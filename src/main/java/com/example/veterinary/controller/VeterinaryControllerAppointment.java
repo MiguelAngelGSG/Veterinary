@@ -15,7 +15,7 @@ public class VeterinaryControllerAppointment {
     @Autowired
     VeterinaryServiceAppointment veterinaryServiceAppointment;
 
-    @PostMapping(path = "/appointments")
+    @PostMapping(path = "/appointment")
     public Appointment createAppointmentDetails(@RequestBody Appointment newAppointment) {
         return veterinaryServiceAppointment.createAppointmentDetails(newAppointment);
     }

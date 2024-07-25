@@ -15,7 +15,7 @@ public class VeterinaryControllerOwner {
     @Autowired
     VeterinaryServiceOwner veterinaryServiceOwner;
 
-    @PostMapping(path = "/owners")
+    @PostMapping(path = "/owner")
     public Owner createOwner(@RequestBody Owner newOwner) {
         return veterinaryServiceOwner.createOwner(newOwner);
     }
