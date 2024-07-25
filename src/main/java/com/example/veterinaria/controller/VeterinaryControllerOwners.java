@@ -1,7 +1,6 @@
 package com.example.veterinaria.controller;
 
 import com.example.veterinaria.model.Pet;
-import com.example.veterinaria.service.VeterinaryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;

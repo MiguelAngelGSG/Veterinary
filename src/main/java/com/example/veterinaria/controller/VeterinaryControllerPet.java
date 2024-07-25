@@ -1,9 +1,9 @@
 package com.example.veterinaria.controller;
 
+import com.example.veterinaria.service.VeterinaryServicePet;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.example.veterinaria.model.Pet;
-import com.example.veterinaria.service.VeterinaryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
@@ -14,13 +14,11 @@ import java.util.ArrayList;
 @CrossOrigin(origins = "*")
 
 
-public class VeterinaryController {
+public class VeterinaryControllerPet {
 
-    @Autowired VeterinaryService veterinaryService;
+    @Autowired
+    VeterinaryServicePet veterinaryServicePet;
 
-    @GetMapping(path = "/pets")
-    public ArrayList<Pet> getAll() {
-        return veterinaryService.getAllInfo();
-    }
+
 
 }

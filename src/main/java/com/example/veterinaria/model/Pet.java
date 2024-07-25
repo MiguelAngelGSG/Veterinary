@@ -33,12 +33,10 @@ public class Pet {
     @Column(name = "gender")
     private String gender;
 
-    @OneToOne
-    @JoinColumn(name = "owner_id")
-    private Owners owner;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "owner_id", nullable = false)
+    private Owner owner;
 
-    @OneToMany(mappedBy = "pet", cascade = CascadeType.ALL)
-    private Set<AppointmentDetails> appointmentDetails = new HashSet<>();
+    @OneToOne(mappedBy = "pet", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private AppointmentDetails appointmentDetails;
 }
-
-
