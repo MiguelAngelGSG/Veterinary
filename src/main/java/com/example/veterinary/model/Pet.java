@@ -36,5 +36,5 @@ public class Pet {
     private Owner owner;
 
     @OneToOne(mappedBy = "pet", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private AppointmentDetails appointmentDetails;
+    private Appointment appointment;
 }

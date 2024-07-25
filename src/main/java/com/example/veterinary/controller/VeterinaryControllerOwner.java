@@ -10,12 +10,12 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/")
 @CrossOrigin(origins = "*")
 
-public class VeterinaryControllerOwners {
+public class VeterinaryControllerOwner {
 
     @Autowired
     VeterinaryServiceOwner veterinaryServiceOwner;
 
-    @PostMapping(path = "/owner")
+    @PostMapping(path = "/owners")
     public Owner createOwner(@RequestBody Owner newOwner) {
         return veterinaryServiceOwner.createOwner(newOwner);
     }
