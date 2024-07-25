@@ -1,5 +1,6 @@
 package com.example.veterinaria.controller;
 
+import com.example.veterinaria.model.AppointmentDetails;
 import com.example.veterinaria.service.VeterinaryServiceAppointmentDetails;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,9 +18,9 @@ public class VeterinaryControllerAppointmentDetails {
 
     @Autowired
     VeterinaryServiceAppointmentDetails veterinaryServiceAppointmentDetails;
+
+    @PostMapping(path = "/appointments")
+    public AppointmentDetails createAppointmentDetails(@RequestBody AppointmentDetails newAppointmentDetails) {
+        return veterinaryServiceAppointmentDetails.createAppointmentDetails(newAppointmentDetails);
+    }
 }
-
-
-
-
-

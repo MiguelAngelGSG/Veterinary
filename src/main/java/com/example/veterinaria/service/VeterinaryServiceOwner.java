@@ -10,4 +10,9 @@ public class VeterinaryServiceOwner {
 
     @Autowired
     IVeterinaryRepositoryOwner iVeterinaryRepositoryOwner;
+
+    public Owner createOwner(Owner newOwner){
+        iVeterinaryRepositoryOwner.save(newOwner);
+        return newOwner;
+    }
 }

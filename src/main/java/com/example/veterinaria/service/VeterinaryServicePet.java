@@ -10,4 +10,9 @@ public class VeterinaryServicePet {
 
     @Autowired
     IVeterinaryRepositoryPet iVeterinaryRepositoryPet;
+
+    public Pet createPet(Pet newPet){
+        iVeterinaryRepositoryPet.save(newPet);
+        return newPet;
+    }
 }
