@@ -24,6 +24,12 @@ public class VeterinaryControllerOwners {
         return veterinaryService.getAllInfo();
     }
 
+@DeleteMapping(path = "/Owner/{id}")
+    public String deleteOwner(@PathVariable("id") Long id) {
+		return veterinaryService.deleteOwner(id);
+
+    }
 }
+
 
 

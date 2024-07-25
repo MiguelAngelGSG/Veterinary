@@ -1,6 +1,5 @@
 package com.example.veterinaria.service;
 
-
 import com.example.veterinaria.model.Pet;
 import com.example.veterinaria.repositories.IVeterinaryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,16 +17,15 @@ public class VeterinaryService {
         return new ArrayList<>();
     }
 
-    public String deletePets(Long id){
-        try{
-			IVeterinaryRepository.deleteById(id);
-            return "todo bien";
-        }catch (Exception error){
-        return "todo mal";
+    public String deletePets(Long id) {
+        try {
+            IVeterinaryRepository.deleteById(id);
+            return "Pet deleted";
+        } catch (Exception error) {
+            return "Error";
+
+        }
+
+    }
 
 }
-
-}
-
-}
-

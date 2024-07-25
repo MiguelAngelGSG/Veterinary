@@ -23,6 +23,17 @@ public class VeterinaryControllerAppointmentDetails {
         return veterinaryService.getAllInfo();
     }
 
+
+
+/**
+ * @param id
+ * @return
+ */
+@DeleteMapping(path = "/pets/{id}")
+    public String deleteAppointmentDetailString(@PathVariable("id") Long id) {
+		return veterinaryService.deleteAppoiment(id);
+
+    }
 }
 
 
