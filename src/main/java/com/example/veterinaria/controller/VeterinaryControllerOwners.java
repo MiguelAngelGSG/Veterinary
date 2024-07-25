@@ -22,7 +22,6 @@ public class VeterinaryControllerOwners {
     public Owner createOwner(@RequestBody Owner newOwner) {
         return veterinaryServiceOwner.createOwner(newOwner);
     }
-<<<<<<< HEAD
 
 @DeleteMapping(path = "/Owner/{id}")
     public String deleteOwner(@PathVariable("id") Long id) {
@@ -33,6 +32,4 @@ public class VeterinaryControllerOwners {
 
 
 
-=======
 }
->>>>>>> origin/dev

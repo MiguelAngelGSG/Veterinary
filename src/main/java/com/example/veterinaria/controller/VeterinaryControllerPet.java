@@ -22,7 +22,6 @@ public class VeterinaryControllerPet {
     public Pet createPet(@RequestBody Pet newPet) {
         return veterinaryServicePet.createPet(newPet);
     }
-<<<<<<< HEAD:src/main/java/com/example/veterinaria/controller/VeterinaryController.java
 
     @DeleteMapping(path = "/pets/{id}")
     public String deletePets(@PathVariable("id") Long id) {
@@ -30,6 +29,4 @@ public class VeterinaryControllerPet {
     }
 
 }
-=======
-}
->>>>>>> origin/dev:src/main/java/com/example/veterinaria/controller/VeterinaryControllerPet.java
+

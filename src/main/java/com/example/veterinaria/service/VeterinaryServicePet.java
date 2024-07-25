@@ -15,7 +15,6 @@ public class VeterinaryServicePet {
         iVeterinaryRepositoryPet.save(newPet);
         return newPet;
     }
-<<<<<<< HEAD:src/main/java/com/example/veterinaria/service/VeterinaryService.java
 
     public String deletePets(Long id) {
         try {
@@ -28,6 +27,4 @@ public class VeterinaryServicePet {
 
     }
 
-=======
->>>>>>> origin/dev:src/main/java/com/example/veterinaria/service/VeterinaryServicePet.java
 }

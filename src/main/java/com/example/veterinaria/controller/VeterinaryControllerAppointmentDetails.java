@@ -23,7 +23,6 @@ public class VeterinaryControllerAppointmentDetails {
     public AppointmentDetails createAppointmentDetails(@RequestBody AppointmentDetails newAppointmentDetails) {
         return veterinaryServiceAppointmentDetails.createAppointmentDetails(newAppointmentDetails);
     }
-<<<<<<< HEAD
 
 
 
@@ -41,6 +40,4 @@ public class VeterinaryControllerAppointmentDetails {
 
 
 
-=======
-}
->>>>>>> origin/dev
+

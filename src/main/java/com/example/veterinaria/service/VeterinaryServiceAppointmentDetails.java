@@ -1,9 +1,6 @@
 package com.example.veterinaria.service;
 
-<<<<<<< HEAD
-=======
 import com.example.veterinaria.model.AppointmentDetails;
->>>>>>> origin/dev
 import com.example.veterinaria.repositories.IVeterinaryRepositoryAppointmentDetails;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,7 +11,6 @@ public class VeterinaryServiceAppointmentDetails {
     @Autowired
     IVeterinaryRepositoryAppointmentDetails iVeterinaryRepositoryAppointmentDetails;
 
-<<<<<<< HEAD
     public class VeterinaryServiceAppointmentDetails {
 
         public String deleteAppoiment(Long id) {
@@ -29,10 +25,8 @@ public class VeterinaryServiceAppointmentDetails {
 
     }
 
-=======
     public AppointmentDetails createAppointmentDetails(AppointmentDetails newAppointmentDetails){
         iVeterinaryRepositoryAppointmentDetails.save(newAppointmentDetails);
         return newAppointmentDetails;
     }
->>>>>>> origin/dev
 }
