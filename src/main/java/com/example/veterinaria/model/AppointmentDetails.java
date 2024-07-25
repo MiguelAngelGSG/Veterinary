@@ -2,17 +2,24 @@ package com.example.veterinaria.model;
 
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+import java.util.UUID;
 
 
 @Entity
+@Getter
+@Setter
+@NoArgsConstructor
 @Table(name = "appointment_details")
 public class AppointmentDetails {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.UUID)
     @Column(name = "appointment_id")
-    private int appointmentId;
+    private UUID uuid;
 
     @ManyToOne
     @JoinColumn(name = "pet_id", nullable = true)
@@ -33,5 +40,4 @@ public class AppointmentDetails {
     @Column(name = "status")
     private String status;
 
-    // Getters y Setters
 }
