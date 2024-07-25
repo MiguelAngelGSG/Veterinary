@@ -11,13 +11,13 @@ import java.util.UUID;
 @Getter
 @Setter
 @NoArgsConstructor
-@Table(name = "pets")
+@Table(name = "pet")
 public class Pet {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "pet_id")
-    private UUID uuid;
+    private Long Id;
 
     @Column(name = "name")
     private String name;

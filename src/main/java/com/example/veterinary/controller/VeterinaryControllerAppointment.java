@@ -2,12 +2,11 @@ package com.example.veterinary.controller;
 
 import com.example.veterinary.model.Appointment;
 import com.example.veterinary.service.VeterinaryServiceAppointment;
-import org.springframework.web.bind.annotation.RestController;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/")
+@RequestMapping("/test")
 @CrossOrigin(origins = "*")
 
 public class VeterinaryControllerAppointment {
@@ -15,8 +14,8 @@ public class VeterinaryControllerAppointment {
     @Autowired
     VeterinaryServiceAppointment veterinaryServiceAppointment;
 
-    @PostMapping(path = "/appointment")
-    public Appointment createAppointmentDetails(@RequestBody Appointment newAppointment) {
-        return veterinaryServiceAppointment.createAppointmentDetails(newAppointment);
+    @PostMapping(path = "/api/appointment")
+    public Appointment createAppointment(@RequestBody Appointment newAppointment) {
+        return veterinaryServiceAppointment.createAppointment(newAppointment);
     }
 }

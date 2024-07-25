@@ -18,9 +18,9 @@ import java.util.UUID;
 public class Owner {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "owner_id")
-    private UUID uuid;
+    private Long Id;
 
     @Column(name = "name")
     private String name;

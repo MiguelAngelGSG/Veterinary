@@ -11,7 +11,7 @@ public class VeterinaryServiceAppointment {
     @Autowired
     IVeterinaryRepositoryAppointment iVeterinaryRepositoryAppointment;
 
-    public Appointment createAppointmentDetails(Appointment newAppointment){
+    public Appointment createAppointment(Appointment newAppointment){
         iVeterinaryRepositoryAppointment.save(newAppointment);
         return newAppointment;
     }
