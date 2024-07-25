@@ -13,12 +13,8 @@ import java.util.ArrayList;
 @RequestMapping("/")
 @CrossOrigin(origins = "*")
 
-
 public class VeterinaryControllerPet {
 
     @Autowired
     VeterinaryServicePet veterinaryServicePet;
-
-
-
 }

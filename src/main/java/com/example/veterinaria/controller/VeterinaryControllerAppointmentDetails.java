@@ -1,5 +1,6 @@
 package com.example.veterinaria.controller;
 
+import com.example.veterinaria.service.VeterinaryServiceAppointmentDetails;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.example.veterinaria.model.Pet;
@@ -12,17 +13,12 @@ import java.util.ArrayList;
 @RequestMapping("/")
 @CrossOrigin(origins = "*")
 
-
 public class VeterinaryControllerAppointmentDetails {
 
-    @Autowired VeterinaryService veterinaryService;
-
-    @GetMapping(path = "/Appointment")
-    public ArrayList<Pet> getAll() {
-        return veterinaryService.getAllInfo();
-    }
-
+    @Autowired
+    VeterinaryServiceAppointmentDetails veterinaryServiceAppointmentDetails;
 }
+
 
 
 
